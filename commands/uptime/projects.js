@@ -15,7 +15,7 @@ module.exports = {
 
     const all = await UrlsConfig.find(filter); 
 
-    var menuEmoji = "<a:tick:879317182721454160>";
+    var menuEmoji = "🌸";
 
     
     var embed = new MessageEmbed()
