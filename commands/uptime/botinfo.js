@@ -17,16 +17,11 @@ module.exports = {
     )
           const row1 = new MessageActionRow().addComponents(
       new MessageButton()        
-        .setURL(`https://discord.gg/drmBRDjb4d`)
+        .setURL(`https://discord.gg/a7TmUZWqPb`)
         .setLabel("SUPPORT SERVER")
             .setStyle("LINK")
     )
-          const row2 = new MessageActionRow().addComponents(
-      new MessageButton()        
-        .setURL(`https://youtube.com/channel/UC3YKZAmjRJJMTUsYbhiAOAA`)
-        .setLabel("SUBSCRIBE")
-            .setStyle("LINK")
-    )
+          
 
     let days = Math.floor(client.uptime / 86400000);
     let hours = Math.floor(client.uptime / 3600000) % 24;
@@ -39,7 +34,7 @@ module.exports = {
     const embedstats = new MessageEmbed()
         .setAuthor(`${message.member.user.tag}Statistics`)
             
-.addField("<a:developer_badge1:879386609143914546> Developer", devs.map(r => {
+.addField("👨‍💻 Developer", devs.map(r => {
         r = client.users.cache.get(r);
         if (!r)
           return r = "\`Unknown User#0000\`";
@@ -49,7 +44,7 @@ module.exports = {
             }\``;
 
       }).join(", "))
-      .addField("<a:discordjs:879386691629105212> Library", `\`Discord Js ${Discord.version}\``)
+      .addField("📕 Library", `\`Discord Js ${Discord.version}\``)
       .addField("⏱️ Uptime", `\`${days}d ${hours}h ${minutes}m ${seconds}s\``)
       .setColor("RANDOM")
       .addFields(
@@ -77,6 +72,6 @@ module.exports = {
        .setThumbnail(message.member.user.displayAvatarURL())
       .setFooter(`${client.user.tag}`)
       .setTimestamp()
-   return message.channel.send({ components: [row, row1, row2], embeds: [embedstats] })
+   return message.channel.send({ components: [row, row1], embeds: [embedstats] })
   }
 }
