@@ -1,14 +1,14 @@
 {    
-    "prefix": "BOT PREFIX",
-   "mongourl": "MONGO DB URL HERE",        
-  "owners": ["BOT OWNERS"],
+    "prefix": ".",
+   "mongourl": "mongodb+srv://sugar:sugar@sugar.lww8j.mongodb.net/sugar?retryWrites=true&w=majority",        
+  "owners": ["890146474158075915"],
   "timeout": 300000,
         "errorembedemoji": "❌",
         "correctembedemoji": "✅",
         "pinembedemoji": "📌",
         "menuembedemoji": "❣️",
-        "botid": "YOUR BOT ID",
-  "errorlogs": "BOT ERROR LOGS CHANNEL",
-  "successlogs": "BOT SUCCES LOGS CHANNEL",
+        "botid": "931533816768639006",
+  "errorlogs": "894936709559640074",
+  "successlogs": "894936709559640074",
   "disable_fetching": false
 }
