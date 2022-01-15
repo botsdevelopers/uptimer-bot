@@ -2,7 +2,7 @@ require('dotenv').config();
 const { Client, Collection } = require('discord.js');
 const UrlsConfig = require('./database/models/UrlsConfig');
 const fetchProjects = require('./fetchProjects');
-const { timeout, disable_fetching } = require('./config.json');
+const { prefix, timeout, disable_fetching } = require('./config.json');
 
 const client = new Client({
 	intents: 32767,
@@ -11,6 +11,12 @@ const client = new Client({
 module.exports = client;
 client.commands = new Collection();
 client.slashCommands = new Collection();
+
+const express = require('express');
+const app = express();
+const port = 3000;
+app.listen(port, () => console.log(`Bot running on http://localhost:${port}`));
+
 client.config = require('./config.json');
 require('./handler')(client);
 
@@ -38,6 +44,9 @@ setInterval(async () => {
 			}
 		);
 	});
+  
+
+    
 
 	if (!disable_fetching) fetchProjects(client.projects, client);
 }, timeout);
