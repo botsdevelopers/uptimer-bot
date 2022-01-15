@@ -12,10 +12,6 @@ module.exports = client;
 client.commands = new Collection();
 client.slashCommands = new Collection();
 
-const express = require('express');
-const app = express();
-const port = 3000;
-app.listen(port, () => console.log(`Bot running on http://localhost:${port}`));
 
 client.config = require('./config.json');
 require('./handler')(client);
