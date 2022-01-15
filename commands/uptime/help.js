@@ -10,16 +10,20 @@ module.exports = {
 
     const commands = client.commands
       .filter((c) => c.ownerOnly === false)
-      .map((cmd) => `**${prefix}${cmd.name}** - ${cmd.description}`);
+      .map((cmd) => `\n <a:BlueStar:887999877957705759> - **${prefix}${cmd.name}** :-\n\`${cmd.description}\``);
 
     const contents =
-      "Uptimer is a free discord bot that hosts projects 24/7 online.\n\n" +
+      "** Welcome to Uptimer Robo's Help panel. Here's the commands to run the bot **\n\n\n <a:bs:886914437209026560> **To get started:**\n \` use .learn\`. \n\n ** <a:bs:886914437209026560> See the list of my Cmds :**.\n\n"+
+
       commands.sort().join("\n");
 
     let embed = new MessageEmbed()
-      .setTitle("Here are my commands")
+      .setAuthor(
+        "Uptimer Robo • Help Cmds..",
+        "https://cdn.discordapp.com/emojis/890086553794256906.gif"
+      )
       .setDescription(contents)
-      .setColor("RANDOM")
+      .setColor("BLUE")
       .setFooter(`Prefix: "${prefix}"`)
       .setThumbnail(client.user.displayAvatarURL())      
       .setTimestamp();
@@ -28,21 +32,15 @@ module.exports = {
       new MessageButton()        
         .setURL(`https://discord.com/api/oauth2/authorize?client_id=${botid}&permissions=8&scope=bot%20applications.commands`)
         .setLabel("INVITE")
-            .setStyle("LINK")
-    )
-          const row1 = new MessageActionRow().addComponents(
-      new MessageButton()        
-        .setURL(`https://discord.gg/drmBRDjb4d`)
+            .setStyle("LINK"),
+                        new MessageButton()        
+
+        .setURL(`https://discord.gg/a7TmUZWqPb`)
         .setLabel("SUPPORT SERVER")
             .setStyle("LINK")
     )
-          const row2 = new MessageActionRow().addComponents(
-      new MessageButton()        
-        .setURL(`https://youtube.com/channel/UC3YKZAmjRJJMTUsYbhiAOAA`)
-        .setLabel("SUBSCRIBE")
-            .setStyle("LINK")
-    )
+          
 
-    return message.channel.send({ embeds: [embed], components: [row, row1, row2] });
+    return message.channel.send({ embeds: [embed], components: [row] });
   },
 };
