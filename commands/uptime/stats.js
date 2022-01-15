@@ -13,7 +13,7 @@ module.exports = {
 
     const all = await UrlsConfig.find(filter);
 
-    const menuEmoji = "<a:a_v_error:879317251424157707>";
+    const menuEmoji = "💮";
 
     let embed = new MessageEmbed()
       .setColor("RANDOM")
@@ -28,14 +28,14 @@ module.exports = {
       if (data.get("error")) {
         embed.addField(
           `**${count}**. \`${data.projectURL}\``,
-          `<a:a_v_error:879317251424157707> Last Pinged: ${
+          `💮 Last Pinged: ${
             data.updatedAt ? formatDate(data.updatedAt) : "Not Measured"
-          }\n<a:a_v_error:879317251424157707> FetchError: ${data.errorText}`
+          }\n💮 FetchError: ${data.errorText}`
         );
       } else {
         embed.addField(
           `**${count}**. \`${data.projectURL}\``,
-          `<a:a_v_error:879317251424157707> Last Pinged: ${
+          `💮 Last Pinged: ${
             data.updatedAt ? formatDate(data.updatedAt) : "Not Measured"
           }`
         );
