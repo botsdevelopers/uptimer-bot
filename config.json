@@ -1,6 +1,6 @@
 {    
     "prefix": ".",
-   "mongourl": "mongodb+srv://sugar:sugar@sugar.lww8j.mongodb.net/sugar?retryWrites=true&w=majority",        
+   "mongourl": "mongodb+srv://rlx:rlx@rlx4.lxsal.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",        
   "owners": ["890146474158075915"],
   "timeout": 300000,
         "errorembedemoji": "❌",
